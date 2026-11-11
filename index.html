@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#071115" />
+  <title>SYNC — Two hands. One signal.</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar"><div class="brand"><span class="brand-mark">◈</span> SYNC<span class="brand-dot">.</span></div><div class="top-right"><span class="eyebrow">TWO-HAND REFLEX LAB</span><span class="signal"><i></i> LOCAL CAMERA</span></div></header>
+    <main>
+      <section class="hero"><div><p class="kicker">01 / THE COORDINATION TEST</p><h1>Two hands.<br><em>One signal.</em></h1><p class="intro">Read the rule. Match both gestures. Hold the signal to lock it in.</p></div><div class="hero-ornament" aria-hidden="true"><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><span>SYNC</span></div></section>
+      <section class="dashboard" aria-label="Game dashboard">
+        <div class="camera-card panel"><div class="panel-head"><span>LIVE INPUT</span><span id="camera-indicator" class="small-status">CAMERA OFFLINE</span></div><div class="camera-stage"><video id="video" autoplay muted playsinline></video><canvas id="overlay"></canvas><div id="camera-placeholder" class="camera-placeholder"><div class="scan-icon">⌑</div><strong>CAMERA STANDBY</strong><span>Enable your camera to begin tracking</span></div><div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div></div><div class="camera-footer"><span>LIVE TRACKING <b id="fps-label">—</b></span><span>PROCESSING ON DEVICE</span></div></div>
+        <div class="mission panel"><div class="panel-head"><span>ACTIVE MISSION</span><span id="round-label">ROUND 00</span></div><div class="mode"><span id="mode-pill" class="mode-pill">READY</span><span id="mode-copy">Calibrate both hands to unlock the mission.</span></div><div class="target-heading">TARGET SIGNAL</div><div class="targets"><div class="target"><small>LEFT HAND</small><strong id="target-left">—</strong><span id="target-left-icon">◇</span></div><div class="target-divider">+</div><div class="target"><small>RIGHT HAND</small><strong id="target-right">—</strong><span id="target-right-icon">◇</span></div></div><div class="progress-label"><span>HOLD TO LOCK</span><span id="hold-label">0%</span></div><div class="progress"><div id="hold-bar"></div></div><div id="feedback" class="feedback" role="status" aria-live="polite">Awaiting camera input.</div><button id="start-button" class="primary-button">ENABLE CAMERA <span>↗</span></button><button id="reset-button" class="text-button" hidden>RESTART SESSION ↺</button></div>
+      </section>
+      <section class="lower"><div class="readouts panel"><div class="panel-head"><span>LIVE HAND STATUS</span><span>GESTURE READOUT</span></div><div class="hand-readouts"><div class="hand-readout" id="left-readout"><span class="hand-side">L / LEFT</span><strong id="left-state">NOT FOUND</strong><span id="left-confidence">SHOW YOUR HAND</span></div><div class="hand-readout" id="right-readout"><span class="hand-side">R / RIGHT</span><strong id="right-state">NOT FOUND</strong><span id="right-confidence">SHOW YOUR HAND</span></div></div></div><div class="stats panel"><div class="stat"><span>SCORE</span><strong id="score">0000</strong></div><div class="stat"><span>STREAK</span><strong id="streak">00</strong></div><div class="stat"><span>TIME</span><strong id="time">60<span class="unit">s</span></strong></div></div></section>
+      <section class="instructions"><div><span class="section-index">02 / HOW TO PLAY</span><h2>Stay in sync.</h2></div><div class="instruction-list"><p><b>01</b> Allow camera access and show both hands with room around your fingers.</p><p><b>02</b> Calibrate by showing <strong>OPEN</strong>, then <strong>FIST</strong> with both hands.</p><p><b>03</b> Match the two targets. <strong>REVERSE</strong> means perform the opposite of what is shown.</p><p><b>04</b> Hold the correct pair briefly. Complete as many rounds as you can in 60 seconds.</p></div></section>
+    </main><footer><span>SYNC / GAME JAM MVP</span><span>CAMERA FRAMES NEVER LEAVE YOUR BROWSER</span></footer>
+  </div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
